@@ -1,6 +1,6 @@
 package dependencyInversion;
 
-abstract class Livro implements Envio{
+public class Livro implements Envio{
     private String titulo;
     private String autor;
 
@@ -23,5 +23,10 @@ abstract class Livro implements Envio{
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    @Override
+    public void enviarLivro() {
+        System.out.println("Enviando livro...");
     }
 }

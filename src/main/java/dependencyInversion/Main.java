@@ -5,18 +5,12 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
+        Livro livro = new Livro("O Tempo É Relativo", "Alguém");
 
-        Livro livroFisico = new LivroFisico("AAAAAAAAAAAAAAAAAAA", "Desconhecido e desesperado");
-        Livro ebook = new Ebook("Precisamos ter esperança", "Aristóteles");
+        LivrariaOnline livrariaOnline = new LivrariaOnline(livro);
 
-        ArrayList<Livro> livros = new ArrayList<>();
-        livros.add(livroFisico);
-        livros.add(ebook);
+        livrariaOnline.comprarLivro(livro);
 
-
-        LivrariaOnline livrariaOnline = new LivrariaOnline(livros);
-        livrariaOnline.comprarLivro(ebook);
-        livrariaOnline.comprarLivro(livroFisico);
 
 
     }
